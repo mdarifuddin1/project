@@ -15,9 +15,31 @@ include 'connect.php';
 
 <body>
     <div class="container">
-        <button type="button" class="btn btn-success my-5 ">
-            <a href="addTeacher.php" class="text-light ">Add User</a>
-        </button>
+        <h2 class="text-center">University Exam Duty Schedule</h2>
+    <form method="post">
+            <div class="mb-3">
+                <label class="form-label">Add Teacher Name</label>
+                <input type="text" name="name" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">designation</label>
+                <input type="text" name="designation" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Duty Date</label>
+                <input type="date" name="date" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Duty Time</label>
+                <input type="text" name="time" class="form-control">
+            </div>
+
+
+            <button type="submit" name="submit" class="btn btn-danger">Submit</button>
+        </form>
 
         <table class="table">
             <thead>
@@ -66,6 +88,10 @@ include 'connect.php';
             </tbody>
         </table>
     </div>
+   
+    
+    
+    
 </body>
 
 </html>
