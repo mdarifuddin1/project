@@ -65,6 +65,7 @@ $con->close();
     <table class="table table-bordered">
         <thead>
             <tr>
+                <td>DESIGNATION</td>
                 <td>COURSE NAME</td>
                 <td>COURSE CODE</td>
                 <td>EXAM DATE</td>
@@ -76,6 +77,7 @@ $con->close();
         foreach ($results as $user){
         ?>
             <tr>
+                <td><?php echo $user['designation'] ?></td>
                 <td><?php echo $user['course'] ?></td>
                 <td><?php echo $user['course_code'] ?></td>
                 <td><?php echo $user['exam_date'] ?></td>
@@ -88,9 +90,6 @@ $con->close();
 </div>
 
 
-
-
-        <br>
        
         
     </div>
