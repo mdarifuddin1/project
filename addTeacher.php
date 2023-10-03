@@ -8,11 +8,12 @@ if (isset($_POST['submit'])) {
     $course_code   = $_POST['course_code'];
     $exam_date     = $_POST['exam_date'];
     $my_date       = date('Y-m-d', strtotime($exam_date));
-    $exam_time    = $_POST['exam_time'];
+    $exam_time     = $_POST['exam_time'];
+   
   
     
 
-    $sql = "INSERT INTO course(name, designation, course, course_code, `exam_date`, exam_time) VALUES ('$name', '$designation', '$course', '$course_code', '$my_date', $exam_time)";
+    $sql = "INSERT INTO course(name, designation, course, course_code, `exam_date`, exam_time) VALUES ('$name', '$designation', '$course', '$course_code', '$my_date', '$exam_time')";
     if (mysqli_query($con, $sql)) {
 
         echo "Data insertion Successful";
