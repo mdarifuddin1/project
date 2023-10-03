@@ -1,5 +1,22 @@
 <?php
 include 'connect.php';
+if (isset($_POST['submit'])) {
+    $name         = $_POST['name'];
+    $designation  = $_POST['designation'];
+    $date         = $_POST['date'];
+    $my_date      = date('Y-m-d', strtotime($date));
+    $time         = $_POST['time'];
+
+    $sql = "INSERT INTO duty(name, designation, `date`, time) VALUES ('$name', '$designation', '$my_date', '$time')";
+
+
+    if (mysqli_query($con, $sql)) {
+
+        echo "Data insertion Successful";
+    } else {
+        echo "Data insertion unsuccessful";
+    }
+}
 ?>
 
 <!doctype html>
