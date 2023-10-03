@@ -71,6 +71,7 @@ $con->close();
         </thead>
         <tbody>
         <?php
+       
         foreach ($results as $user){
         ?>
             <tr>
